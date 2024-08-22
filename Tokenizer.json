@@ -1,0 +1,19 @@
+{
+    "vocab": {
+        "": 0,
+        "<|start_word|>": 1,
+        "<|end_word|>": 2,
+        "<|start_phrase|>": 3,
+        "<|end_phrase|>": 4,
+        "Hi": 5,
+        "\u0ca6\u0cc4all": 6,
+        "\u0ca6\u0cc4brother": 7,
+        "\u0c90.\u0c90": 8,
+        "\u0ca6\u0cc4How": 9,
+        "\u0ca6\u0cc4are": 10,
+        "\u0ca6\u0cc4you": 11,
+        "\u0ca6\u0cc4": 12,
+        "\u0c90?\u0c90": 13,
+        "\u0ca6\u0cc4brothers": 14
+    }
+}
