@@ -1,6 +1,6 @@
 import string
 
-from .json_manager import JsonManager
+from json_manager import JsonManager
 
 tokenizer_path = "Tokenizer.json"
 start_word = 1
@@ -52,8 +52,9 @@ class Tokenizer:
                 vocab[letter] = last_token
                 tokens.append(last_token)
                 my_tokenizer['vocab'] = vocab
-                # Enregistrer les données dans le fichier JSON
-                JsonManager.write_json(tokenizer_path, my_tokenizer)
+
+        # Enregistrer les données dans le fichier JSON
+        JsonManager.write_json(tokenizer_path, my_tokenizer)
 
         if add_special_tokens == True:
             tokens = [start_phrase] + tokens + [end_phrase]
@@ -100,4 +101,4 @@ class Tokenizer:
         return text
     
 # print(Tokenizer.encode("Hi all brothers. How are you ?"))
-# print(Tokenizer.decode([5, 6, 7, 14, 8, 9, 10, 11, 12, 13]))
+# print(Tokenizer.decode([8, 9, 10, 11, 12, 13, 14, 15, 16]))
