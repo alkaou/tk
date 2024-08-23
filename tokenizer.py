@@ -35,6 +35,8 @@ class Tokenizer:
         my_tokenizer = JsonManager.load_json_file(tokenizer_path)
         vocab = my_tokenizer['vocab']
 
+        num_of_not_saved = 0
+
         # Récupérer le dernier token utilisé
         last_token = max(vocab.values())
         for letter in letter_or_word:
@@ -52,9 +54,11 @@ class Tokenizer:
                 vocab[letter] = last_token
                 tokens.append(last_token)
                 my_tokenizer['vocab'] = vocab
+                num_of_not_saved += 1
 
         # Enregistrer les données dans le fichier JSON
-        JsonManager.write_json(tokenizer_path, my_tokenizer)
+        if num_of_not_saved > 0:
+            JsonManager.write_json(tokenizer_path, my_tokenizer)
 
         if add_special_tokens == True:
             tokens = [start_phrase] + tokens + [end_phrase]
