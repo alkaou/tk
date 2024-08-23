@@ -1,11 +1,11 @@
-# import os
+import os
 # import sys
 import string
 # sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from .json_manager import Json
 
-tokenizer_path = "tk_json/Tokenizer.json"
+tokenizer_path = "tk/Tokenizer.json"
 start_word = 1
 end_word = 2
 start_phrase = 3
@@ -16,7 +16,7 @@ space = "ದೄ"
 punctuation = "ಐ"
 sym_ponctuations = [f"{punctuation}{punct}{punctuation}" for punct in ponctuations]
 
-os.makedirs("tk_json", exist_ok=True)
+os.makedirs("tk", exist_ok=True)
 
 class Tokenizer:
 
