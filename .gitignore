@@ -12,7 +12,3 @@ __pycache__
 .idea
 /.idea
 *.pyc
-.json
-/.json
-*.json
-*/.json

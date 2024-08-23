@@ -1,0 +1,9 @@
+{
+    "vocab": {
+        "": 0, 
+        "<|start_word|>": 1,
+        "<|end_word|>": 2,
+        "<|start_phrase|>": 3,
+        "<|end_phrase|>": 4,
+    }
+}
