@@ -1,6 +1,6 @@
 import string
 
-from json_manager import JsonManager
+from .json_manager import JsonManager
 
 tokenizer_path = "Tokenizer.json"
 start_word = 1
