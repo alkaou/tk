@@ -1,9 +1,9 @@
-import os
-import sys
+# import os
+# import sys
 import string
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from json_manager import Json
+from .json_manager import Json
 
 tokenizer_path = "Tokenizer.json"
 start_word = 1
