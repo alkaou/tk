@@ -16,6 +16,8 @@ space = "ದೄ"
 punctuation = "ಐ"
 sym_ponctuations = [f"{punctuation}{punct}{punctuation}" for punct in ponctuations]
 
+os.makedirs("tk_json", exist_ok=True)
+
 class Tokenizer:
 
     @staticmethod
