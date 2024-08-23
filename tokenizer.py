@@ -5,7 +5,7 @@ import string
 
 from .json_manager import Json
 
-tokenizer_path = "Tokenizer.json"
+tokenizer_path = "tk_json/Tokenizer.json"
 start_word = 1
 end_word = 2
 start_phrase = 3
