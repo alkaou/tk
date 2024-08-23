@@ -16,7 +16,7 @@ space = "ದೄ"
 punctuation = "ಐ"
 sym_ponctuations = [f"{punctuation}{punct}{punctuation}" for punct in ponctuations]
 
-os.makedirs("tk", exist_ok=True)
+# os.makedirs("tk", exist_ok=True)
 
 class Tokenizer:
 
