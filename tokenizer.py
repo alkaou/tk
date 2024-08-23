@@ -1,9 +1,6 @@
-import os
-# import sys
 import string
-# sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from .json_manager import Json
+from .json_manager import JsonManager
 
 tokenizer_path = "Tokenizer.json"
 start_word = 1
@@ -35,7 +32,7 @@ class Tokenizer:
     
     @staticmethod
     def tokenize(letter_or_word, tokens=[], add_special_tokens=False):
-        my_tokenizer = Json.load_json_file(tokenizer_path)
+        my_tokenizer = JsonManager.load_json_file(tokenizer_path)
         vocab = my_tokenizer['vocab']
 
         # Récupérer le dernier token utilisé
@@ -56,7 +53,7 @@ class Tokenizer:
                 tokens.append(last_token)
                 my_tokenizer['vocab'] = vocab
                 # Enregistrer les données dans le fichier JSON
-                Json.write_json(tokenizer_path, my_tokenizer)
+                JsonManager.write_json(tokenizer_path, my_tokenizer)
 
         if add_special_tokens == True:
             tokens = [start_phrase] + tokens + [end_phrase]
@@ -85,7 +82,7 @@ class Tokenizer:
 
     @staticmethod
     def decode(tokens):
-        my_tokenizer = Json.load_json_file(tokenizer_path)
+        my_tokenizer = JsonManager.load_json_file(tokenizer_path)
         # Inverser le dictionnaire 'vocab'
         inverse_vocab = {v: k for k, v in my_tokenizer['vocab'].items()}
 
